@@ -76,3 +76,6 @@ flash: $(TARGET).bin
 
 flashreset: $(TARGET).bin
 	st-flash --reset write $(TARGET).bin 0x8000000
+
+flashwin: $(TARGET).bin
+	/mnt/c/Program\ Files/STMicroelectronics/STM32Cube/STM32CubeProgrammer/bin/st-flash.exe write $(TARGET).bin 0x8000000
