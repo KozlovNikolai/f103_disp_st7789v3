@@ -206,7 +206,7 @@ void ST7789_Init(void)
 
 	print_port_state("B", 0);
 	GPIOB->BSRR = GPIO_BSRR_BS0;
-	print_port_state("B", 0); 
+	print_port_state("B", 0);
 	print_port_state("C", 13);
 	printf("ST7789 Init complited\r\n");
 }
@@ -706,72 +706,94 @@ void ST7789_TearEffect(uint8_t tear)
 void ST7789_Test(void)
 {
 	ST7789_Fill_Color(WHITE);
+	printf("ST7789_Fill_Color(WHITE);\r\n");
 	delay(1000);
 	ST7789_WriteString(10, 20, "Speed Test", Font_11x18, RED, WHITE);
+	printf("ST7789_WriteString(10, 20, Speed Test, Font_11x18, RED, WHITE);\r\n");
 	delay(1000);
 	ST7789_Fill_Color(CYAN);
+	printf("ST7789_Fill_Color(CYAN);\r\n");
 	delay(500);
 	ST7789_Fill_Color(RED);
+	printf("ST7789_Fill_Color(RED);\r\n");
 	delay(500);
 	ST7789_Fill_Color(BLUE);
+	printf("ST7789_Fill_Color(BLUE);\r\n");
 	delay(500);
 	ST7789_Fill_Color(GREEN);
+	printf("ST7789_Fill_Color(GREEN);\r\n");
 	delay(500);
 	ST7789_Fill_Color(YELLOW);
+	printf("ST7789_Fill_Color(YELLOW);\r\n");
 	delay(500);
 	ST7789_Fill_Color(BROWN);
+	printf("ST7789_Fill_Color(BROWN);\r\n");
 	delay(500);
 	ST7789_Fill_Color(DARKBLUE);
+	printf("ST7789_Fill_Color(DARKBLUE);\r\n");
 	delay(500);
 	ST7789_Fill_Color(MAGENTA);
+	printf("ST7789_Fill_Color(MAGENTA);\r\n");
 	delay(500);
 	ST7789_Fill_Color(LIGHTGREEN);
+	printf("ST7789_Fill_Color(LIGHTGREEN);\r\n");
 	delay(500);
 	ST7789_Fill_Color(LGRAY);
+	printf("ST7789_Fill_Color(LGRAY);\r\n");
 	delay(500);
 	ST7789_Fill_Color(LBBLUE);
+	printf("ST7789_Fill_Color(LBBLUE);\r\n");
 	delay(500);
 	ST7789_Fill_Color(WHITE);
+	printf("ST7789_Fill_Color(WHITE);\r\n");
 	delay(500);
 
 	ST7789_WriteString(10, 10, "Font test.", Font_16x26, GBLUE, WHITE);
 	ST7789_WriteString(10, 50, "Hello Steve!", Font_7x10, RED, WHITE);
 	ST7789_WriteString(10, 75, "Hello Steve!", Font_11x18, YELLOW, WHITE);
 	ST7789_WriteString(10, 100, "Hello Steve!", Font_16x26, MAGENTA, WHITE);
+	printf("ST7789_WriteString some fonts\r\n");
 	delay(1000);
 
 	ST7789_Fill_Color(RED);
 	ST7789_WriteString(10, 10, "Rect./Line.", Font_11x18, YELLOW, BLACK);
 	ST7789_DrawRectangle(30, 30, 100, 100, WHITE);
+	printf("ST7789_DrawRectangle(30, 30, 100, 100, WHITE);\r\n");
 	delay(1000);
 
 	ST7789_Fill_Color(RED);
 	ST7789_WriteString(10, 10, "Filled Rect.", Font_11x18, YELLOW, BLACK);
 	ST7789_DrawFilledRectangle(30, 30, 50, 50, WHITE);
+	printf("ST7789_DrawFilledRectangle(30, 30, 50, 50, WHITE);\r\n");
 	delay(1000);
 
 	ST7789_Fill_Color(RED);
 	ST7789_WriteString(10, 10, "Circle.", Font_11x18, YELLOW, BLACK);
 	ST7789_DrawCircle(60, 60, 25, WHITE);
+	printf("ST7789_DrawCircle(60, 60, 25, WHITE);\r\n");
 	delay(1000);
 
 	ST7789_Fill_Color(RED);
 	ST7789_WriteString(10, 10, "Filled Cir.", Font_11x18, YELLOW, BLACK);
 	ST7789_DrawFilledCircle(60, 60, 25, WHITE);
+	printf("Filled Circle\r\n");
 	delay(1000);
 
 	ST7789_Fill_Color(RED);
 	ST7789_WriteString(10, 10, "Triangle", Font_11x18, YELLOW, BLACK);
 	ST7789_DrawTriangle(30, 30, 30, 70, 60, 40, WHITE);
+	printf("ST7789_DrawTriangle(30, 30, 30, 70, 60, 40, WHITE);\r\n");
 	delay(1000);
 
 	ST7789_Fill_Color(RED);
 	ST7789_WriteString(10, 10, "Filled Tri", Font_11x18, YELLOW, BLACK);
 	ST7789_DrawFilledTriangle(30, 30, 30, 70, 60, 40, WHITE);
+	printf("Filled Triangel\r\n");
 	delay(1000);
 
 	//	If FLASH cannot storage anymore datas, please delete codes below.
 	ST7789_Fill_Color(WHITE);
 	ST7789_DrawImage(0, 0, 128, 128, (uint16_t *)saber);
+	printf("ST7789_DrawImage(0, 0, 128, 128, (uint16_t *)saber);\r\n");
 	delay(3000);
 }
